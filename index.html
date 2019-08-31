@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <link rel="stylesheet" type="text/css" href="./static/style.css">
+    <meta charset="UTF-8">
+    <title>Image Classifier</title>
+</head>
+<body>
+    <div class="container">
+        <div class="Header">
+            <ul>
+                <li>AI WebApp</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div class="tittle">
+          <h2>Image Classifier</h2>
+        </div>
+          <!-- Add an image that we will use to test -->
+        <div class="results">
+            <button>Load Image</button>
+             <img id='img' src="image/imagen.jpg" height="300" width="300s">
+                <h3>Result</h3>
+                <div>
+                    <p>Prediction:</p>
+                    <div>Answer</div>
+                </div>
+                <div>
+                    <p>Probability:</p>
+                    <div>Number</div>
+                </div>
+
+        </div>
+    </div>
+
+    <!-- Load index.js after the content of the page -->
+    <script src="index.js"></script>
+</body>
+</html>
