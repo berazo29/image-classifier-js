@@ -7,19 +7,113 @@
 html {
     background-color: #fff;
     color: #555;
-    font-family: 'Lato', 'Arial', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
-}
 
+}
+h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
 .container {
     max-width: 1140px;
     margin: 0 auto;
-    background-color: aqua;
 
 }
+/*          HEADER          */
+.header {
+    background-color: #2980B9;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
 
-.container h1 {
-    text-align: center;
+.header div {
+    align-content: center;
+}
+.logo {
+    font-family: 'Agency FB', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 25px 25px;
+}
+.header div {
+    margin-left: 50px;
+    margin-right: 50px;
+    /*padding: 25px 25px;*/
+    color: white;
+}
+
+.contact {
+    font-weight: lighter;
+    font-size: .8em;
+    background-color: #169BD5;
+    margin: auto;
+    border: 1px solid #ffffff;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.contact:hover {
+    opacity:.8;
+    cursor: pointer;
+}
+
+/*          TITTLE          */
+.tittle {
+    margin-left: 75px;
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+/*          BUTTON          */
+.button {
+    width: 150px;
+    height: 40px;
+    margin: 50px 0 10px 75px;
+    padding: 10px 30px;
+    background-color: #169BD5;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: .3s;
+}
+.button:hover {
+    background-color: #2980B9;
+}
+.button:active {
+    transform: scale(.95);
+}
+/*          CONTENT*/
+.results {
+    margin-left: 75px;
+    display: flex;
+    justify-content: right;
+}
+
+.outer-container {
+    margin-left: 10%;
+}
+
+.container-box {
+    display: flex;
+}
+.inner-container-left {
+    margin: 30px 0 20px 50px;
+}
+.inner-container-left div {
+    margin-bottom: 30px;
+}
+.inner-container-right {
+    color: #2980B9;
+    margin: 30px 0 20px 50px;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+.inner-container-right div {
+    margin-bottom: 30px;
 }
