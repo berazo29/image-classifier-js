@@ -18,6 +18,11 @@ h2 {
     font-weight: 600;
     font-size: 1.5em;
 }
+.previewImg {
+    height: 300px;
+    width: 300px;
+    border: 1px solid grey;
+}
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -72,16 +77,18 @@ h2 {
 
 /*          BUTTON          */
 .button {
-    width: 150px;
+    width: 180px;
     height: 40px;
-    margin: 50px 0 10px 75px;
+    margin: 30px 0 10px 75px;
     padding: 10px 30px;
     background-color: #169BD5;
     color: white;
     border: 1px solid white;
     border-radius: 5px;
     transition: .3s;
+    font-size: .8em;
 }
+
 .button:hover {
     background-color: #2980B9;
 }
@@ -116,4 +123,8 @@ h2 {
 }
 .inner-container-right div {
     margin-bottom: 30px;
+}
+
+#file-1 {
+    display: none;
 }
