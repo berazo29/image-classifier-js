@@ -18,7 +18,7 @@ imgLoad.addEventListener("change", function () {
         imgVerification = true;
     }
     if (imgVerification === true) {
-        console.log('Image Upload');
+        console.log('Image Uploaded');
         console.log('Reading...');
 
         async function app() {
@@ -28,34 +28,17 @@ imgLoad.addEventListener("change", function () {
             net = await mobilenet.load();
             console.log('Sucessfully loaded model');
 
-
             // Make a prediction through the model on our image.
-            const imgEl = document.getElementById('file-1');
+            const imgEl = document.querySelector('.previewImg');
             const result = await net.classify(imgEl);
             console.log(result);
+
         }
 
-        app();
+        app(imgDisplay);
     }
     else {
         console.log('No Image Uploaded')
     }
 });
 
-// Machine-Learning
-/*async function app() {
-  console.log('Loading mobilenet..');
-
-  // Load the model.
-  net = await mobilenet.load();
-  console.log('Sucessfully loaded model');
-
-
-
-  // Make a prediction through the model on our image.
-  const imgEl = document.getElementById('file');
-  const result = await net.classify(imgEl);
-  console.log(result);
-}
-
-app();*!/*/
