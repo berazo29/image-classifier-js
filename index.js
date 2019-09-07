@@ -3,6 +3,8 @@ const imgLoad = document.getElementById('file-1');
 const imgDisplay = document.querySelector('.previewImg');
 let imgVerification = false;
 
+const ans = document.getElementById('answer');
+
 imgLoad.addEventListener("change", function () {
     const file = this.files[0];
 
@@ -33,12 +35,23 @@ imgLoad.addEventListener("change", function () {
             const result = await net.classify(imgEl);
             console.log(result);
 
-        }
 
-        app(imgDisplay);
+            // Change text
+            let roundProb = result[0].probability*100;
+            let textDis = result[0].className;
+            document.getElementById('answer').innerHTML = textDis;
+            document.getElementById('percentage').innerHTML = roundProb.toFixed(2)+'%';
+        }
+        app();
+
     }
     else {
         console.log('No Image Uploaded')
     }
 });
 
+
+//  EXPRESSION TO CHANCE THE TEXT
+/*
+    document.getElementById("p1").innerHTML = "New text!";
+*/
