@@ -31,16 +31,18 @@ imgLoad.addEventListener('change', function () {
       const result = await net.classify(imgEl)
       const baseDiv = document.getElementById('base')
       baseDiv.lastElementChild.setAttribute('id', 'id-0')
-      for (let i = 1; i < result.length; i++) {
-        const item = baseDiv.lastElementChild
-        const clone = item.cloneNode(true)
-        baseDiv.appendChild(clone)
-        baseDiv.lastElementChild.setAttribute('id', 'id-' + i.toString())
-      }
-      for (let i = 0; i < result.length; i++) {
-        const innerDiv = document.getElementById('id-' + i.toString())
-        innerDiv.lastElementChild.firstElementChild.setAttribute('id', 'description-' + i.toString())
-        innerDiv.lastElementChild.lastElementChild.setAttribute('id', 'percentage-' + i.toString())
+      if (baseDiv.children.length <= 2) {
+        for (let i = 1; i < result.length; i++) {
+          const item = baseDiv.lastElementChild
+          const clone = item.cloneNode(true)
+          baseDiv.appendChild(clone)
+          baseDiv.lastElementChild.setAttribute('id', 'id-' + i.toString())
+        }
+        for (let i = 0; i < result.length; i++) {
+          const innerDiv = document.getElementById('id-' + i.toString())
+          innerDiv.lastElementChild.firstElementChild.setAttribute('id', 'description-' + i.toString())
+          innerDiv.lastElementChild.lastElementChild.setAttribute('id', 'percentage-' + i.toString())
+        }
       }
       result.forEach((e, index) => {
         document.getElementById('description-' + index.toString()).innerHTML = e.className
