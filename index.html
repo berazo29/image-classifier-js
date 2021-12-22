@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
-    <link rel="stylesheet" type="text/css" href="./static/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <title>Image Classifier</title>
 </head>
@@ -29,7 +29,7 @@
           <!-- Add an image that we will use to test -->
         <div class="results">
             <img scr="" class='previewImg'>
-            <div class="outer-container">
+            <div class="outer-container" id='base'>
                 <h2>Results:</h2>
                 <div class="container-box">
                     <div class="inner-container-left">
@@ -37,8 +37,8 @@
                         <div>Probability: </div>
                     </div>
                      <div class="inner-container-right">
-                        <div id="answer">--</div>
-                        <div id="percentage">--</div>
+                        <div>--</div>
+                        <div>--</div>
                      </div>
                 </div>
 
