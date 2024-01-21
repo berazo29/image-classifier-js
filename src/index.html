@@ -11,8 +11,8 @@
 </head>
 
 <body>
-  <div class="container mx-auto">
-    <div class="flex items-center justify-center m-4 rounded-lg dark:bg-gray-800 text-white">
+  <div class="flex flex-col justify-between mx-auto h-screen container">
+    <div class="flex items-center justify-center m-4 rounded-lg bg-gray-800 shadow text-white">
       <h1 x-data="{
     startingAnimation: { opacity: 0, scale: 4 },
     endingAnimation: { opacity: 1, scale: 1, stagger: 0.07, duration: 1, ease: 'expo.out' },
@@ -97,9 +97,9 @@
       </div>
     </div>
 
-    <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-      <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-center">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
+    <footer class="bg-gray-800 rounded-lg shadow m-4">
+      <div class="w-full mx-auto max-w-screen-xl p-4 flex items-center justify-center">
+        <span class="text-sm text-gray-500 text-center text-gray-400">© 2023
           <a href="https://github.com/berazo29" target="_blank" class="hover:underline">berazo29™</a>. All Rights
           Reserved.
         </span>
