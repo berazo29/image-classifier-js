@@ -1,0 +1,21 @@
+{
+  "name": "image-classifier-js",
+  "version": "1.0.0",
+  "description": "Web app to identify images using tensorflowjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "npx tailwindcss -i ./src/style.css -o ./public/style.css --watch",
+    "build-js": "npx esbuild src/script.js --outfile=public/script.js --bundle --watch",
+    "cp-index": "cp src/index.html public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alpinejs": "^3.13.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.11",
+    "tailwindcss": "^3.4.1"
+  }
+}
